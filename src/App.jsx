@@ -184,13 +184,25 @@ function App() {
           transition={{ delay: 0.2 }}
           className="text-xl text-zinc-500 max-w-xl leading-relaxed"
         >
-          AI Engineer and QA Automation Engineer. By day, I solve complex problems in Artificial
-          Intelligence; by evening, I apply the same discipline and strategic
-          thinking on the Brazilian Jiu-Jitsu mats.
+          AI Engineer and QA Automation Engineer. By day, I solve complex
+          problems in Artificial Intelligence; by evening, I apply the same
+          discipline and strategic thinking on the Brazilian Jiu-Jitsu mats.
         </motion.p>
       </header>
 
       <main id="projects" className="max-w-4xl mx-auto px-6 pb-32">
+        {/* NOWY NAGŁÓWEK PROJECTS */}
+        <div className="flex flex-col items-center mb-16">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-xs font-bold uppercase tracking-[0.3em] text-zinc-400 mb-4"
+          >
+            Selected Works
+          </motion.h2>
+          <div className="h-[1px] w-12 bg-zinc-200"></div>
+        </div>
         <div className="grid grid-cols-1 gap-10">
           {PROJECTS.map((project) => (
             <motion.div
